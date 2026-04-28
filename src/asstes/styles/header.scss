@@ -1,0 +1,189 @@
+// Import SCSS Variables
+@import 'variables';
+
+.bh-header-sec {
+    z-index: 1220 !important;
+    .bh-header.navbar {
+        background-color: $bg-light-header;
+        padding: 10px 0;
+        background-color: $header-sticky;
+        // backdrop-filter: blur(10px);
+
+        @media (min-width:1280px) {
+            padding: 0 !important;
+            height: 63px !important;
+        }
+
+        .navbar-collapse {
+            @media (min-width:1280px) {
+                height: 100%;
+            }
+        }
+
+    }
+
+    .bh-header {
+
+        .container {
+            @media (min-width: 1280px) {
+                height: 100%;
+            }
+        }
+
+        &.scrolled {
+            background-color: $header-sticky;
+        }
+
+        .brand-title {
+            font-weight: $extra-bold;
+            line-height: 22px;
+            text-transform: uppercase;
+            padding: 0;
+            font-size: $fs-16;
+            color: $white;
+            margin-right: 0;
+            display: flex;
+            column-gap: 0.5rem;
+
+            &:hover {
+                color: $white;
+            }
+
+            &:focus {
+                color: $white;
+            }
+        }
+
+        .brand-title.active {
+            color: $white;
+        }
+
+        .bh-navbar {
+
+            @media (min-width: 1280px) {
+                height: 100%;
+
+            }
+
+            .nav-item {
+
+                @media (min-width: 1280px) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+
+                a {
+                    font-size: $fs-14;
+                    font-weight: $medium;
+                    color: $white;
+                }
+            }
+
+            .nav-link {
+                font-size: $fs-14;
+                font-weight: $medium;
+                color: $white;
+
+                @media (min-width: 1280px) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .nav-item.dropdown {
+
+                &:not(:last-child) {
+                    margin-right: 10px;
+
+                }
+
+                + {
+                    .nav-link {
+
+                        &:not(:last-child) {
+                            margin-right: 10px;
+
+                            @media (min-width: 1280px) {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .dropdown-menu {
+                padding: 0;
+                border-radius: 4px;
+                overflow: hidden;
+                min-width: 200px;
+
+                @media (min-width: 1280px) {
+                    top: 50px !important;
+
+                }
+
+                .dropdown-item {
+                    font-size: $fs-14;
+                    color: $dark-light;
+                    background-color: $tabActive;
+                    padding: 7px 10px;
+
+                    &:hover {
+                        background-color: $bgblack-g;
+                        color: $white;
+                    }
+
+                    &:active {
+                        background-color: $bgblack-g;
+                        color: $white;
+                    }
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $color-light;
+                    }
+                }
+            }
+        }
+    }
+
+    .brand-title {
+        >span {
+            display: block;
+        }
+    }
+
+    .navbar-bt {
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 43px;
+            font-size: $fs-14;
+            font-weight: $semi-bold;
+            border-radius: 100px;
+            min-width: 76px;
+            overflow: hidden;
+            padding: 6px 16px;
+
+            &:not(:first-child) {
+                margin-left: 10px;
+            }
+        }
+    }
+
+}
+
+.mobile-navbar-menu-btn {
+    background-color: white !important;
+    color: black !important;
+}
+
+.mobile-navbar-menu-btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}

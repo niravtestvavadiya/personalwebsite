@@ -1,0 +1,247 @@
+// Import SCSS Variables
+@import "variables";
+@import "mixins";
+
+.login-page-body {
+    background-color: $bg-b;
+    height: 100vh;
+    @include flex(row, center, center);
+
+    // @media (min-width:350px) and (max-width:1024px) {
+    //     height: auto;
+    // }
+
+    .login-card {
+
+        @media (min-width:768px) and (max-width:1024px) {
+            padding: 1rem 3rem;
+        }
+
+        padding: 25px;
+        background-color: $darkLightColor;
+        border-radius: 12px;
+
+        .login-form-card {
+            text-align: center;
+
+            .login-title {
+                color: $white;
+                font-size: $fs-36;
+                font-weight: $medium;
+                margin-bottom: 15px;
+            }
+
+            p {
+                color: $white;
+                font-size: $fs-16;
+                font-weight: $regular;
+            }
+
+            .form-layout {
+                margin-top: 30px;
+
+                .form-control {
+
+                    @include placeholder-style(#999999, 14px, 1);
+                    background-color: #2F2F30;
+                    box-shadow: 0px 1px 2px 0px #1018280D;
+                    height: 46px;
+                    color: $textColor;
+                    font-size: 16px;
+                    border: none;
+                    border-radius: 8px;
+                    width: 100%;
+                }
+
+                .btn-continue {
+                    .btn {
+                        height: 50px;
+                        font-weight: $semi-bold;
+                        font-size: $fs-16;
+                    }
+                }
+            }
+
+            .login-msg {
+                font-size: $fs-14;
+                font-weight: $regular;
+                color: $textColor;
+
+                .text-link {
+                    color: $white;
+                    font-weight: $medium;
+                }
+            }
+
+            .separator {
+                &.separator-content {
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 0;
+                    text-align: center;
+
+                    &:before {
+                        margin-right: 1.25rem;
+                        content: " ";
+                        width: 50%;
+                        border-bottom: 1px solid #999999;
+                    }
+
+                    &:after {
+                        margin-left: 1.25rem;
+                        content: " ";
+                        width: 50%;
+                        border-bottom: 1px solid #999999;
+                    }
+                }
+
+                margin-top: 24px !important;
+                margin-bottom: 24px !important;
+
+                .connect-with {
+                    font-size: $fs-12;
+                    font-weight: $medium;
+                    color: $textColor;
+                    width: 185px !important;
+                }
+            }
+
+            .or-login-buttons {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .third-party-login {
+                    background-color: #FFFFFF17;
+                    width: 112px;
+                    height: 51px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 6px;
+                    border: none;
+
+                    @media (min-width:350px) and (max-width :640px) {
+                        width: fit-content;
+                        height: fit-content;
+                        padding: 1rem 2rem;
+                    }
+
+                    @media (min-width:768px) and (max-width:1024px) {
+                        width: 190px;
+                        height: 65px;
+                    }
+
+                    img {
+                        max-width: 24px;
+                        object-fit: contain;
+                        margin: 0 auto;
+
+
+                        @media (min-width:768px) and (max-width:1024px) {
+                            max-width: 30px;
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+
+        .sent-otp-card {
+            .otp-sent-details {
+                font-size: $fs-16;
+                font-weight: $regular;
+
+                .otp-no {
+                    font-weight: $medium;
+                    display: inline-block;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                }
+
+                .text-link {
+                    color: $orange;
+                }
+            }
+
+            .otp-field {
+
+                @media (min-width:350px) and (max-width:640px) {
+                    gap: 0.5rem;
+                }
+
+                @include flex(row, space-between, center);
+
+                .form-control {
+                    font-size: 16px;
+                    max-width: 60px;
+                    height: 60px;
+                    text-align: center;
+                    font-weight: $medium;
+                }
+            }
+        }
+
+        .mb-30 {
+            margin-bottom: 30px;
+        }
+
+        .react-tel-input {
+            .country-list {
+                .country {
+                    text-align: left;
+                }
+            }
+        }
+
+        .react-tel-input {
+            .flag-dropdown {
+                background-color: #2F2F30;
+                border-color: #2F2F30;
+            }
+        }
+    }
+}
+
+.show-validate-msg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    span {
+        color: #999999;
+
+        .timer-play {
+            color: $white;
+        }
+    }
+}
+
+.banner-login-col-div {
+    @media (min-width:350px) and (max-width:650px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (min-width:768px) and (max-width:1024px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-banner {
+
+        @media (min-width:350px) and (max-width:650px) {
+            width: 70% !important;
+        }
+
+        @media (min-width:768px) and (max-width:1024px) {
+            width: 50% !important;
+        }
+    }
+
+}

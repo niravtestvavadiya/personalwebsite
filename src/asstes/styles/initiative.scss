@@ -1,0 +1,453 @@
+// Import SCSS Variables
+@import "variables";
+@import "mixins";
+
+.banner {
+    &.initiative-banner {
+        background-image: url("../images/Initiative/Soul_Foundation_Banner.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    &.initiative-banner-two {
+        background-image: url('../images/Initiative/COCH.jpeg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &.initiative-banner-three {
+        background-image: url('../images/Initiative/Initiative-banner-2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.typing-heading-effect {
+    .title-sec {
+        .title-heading {
+            text-align: left;
+            font-weight: $bold;
+            line-height: normal;
+            color: $colorDarkOpacity-20;
+        }
+    }
+}
+
+.foundation-slider {
+    .foundation-slider-view {
+        position: relative;
+
+        .slide-content {
+            // height: 420px;
+            overflow: hidden;
+            border-radius: 6px;
+
+            @media (min-width:350px) and (max-width:640px) {
+                height: 100%;
+            }
+
+            img {
+                object-fit: cover;
+            }
+
+            @media(min-width:1500px) {
+                height: 550px;
+            }
+        }
+
+        .swiper-button-prev {
+            @extend .slider-btn-white;
+            left: 15%;
+            margin-top: 2rem
+        }
+
+        .swiper-button-next {
+            @extend .slider-btn-white;
+            right: 15%;
+            margin-top: 2rem
+        }
+    }
+}
+
+.key-point-list {
+    li {
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease; // Smooth transition for hover effects or state changes
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $seprator;
+        }
+
+        .key-point-title {
+            font-weight: $semi-bold;
+            font-size: $fs-24;
+            color: $text-black;
+            margin: 0;
+        }
+
+        .key-sub-point {
+            display: none;
+            opacity: 0; // Start with hidden opacity
+            transform: translateY(-10px); // Slide up when hidden
+            transition: all 0.3s ease-in-out; // Smooth animation for display and position
+
+            li {
+                position: relative;
+                padding-left: 25px !important;
+                padding-top: 0;
+                padding-bottom: 0;
+                border: none;
+                cursor: auto;
+
+                &::before {
+                    content: "\F26A";
+                    font-family: bootstrap-icons !important;
+                    color: $orange;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+
+        &.active-menu {
+            .key-sub-point {
+                display: block;
+                opacity: 1; // Fully visible
+                transform: translateY(0); // Reset slide animation
+                transition: all 0.3s ease-in-out; // Apply smooth effect
+
+                li {
+                    color: $keyPointText;
+                    font-weight: $medium;
+                    font-size: $fs-16;
+
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .key-point-title {
+                margin-bottom: 15px;
+            }
+
+            &:not(:last-child)::after {
+                content: "";
+                background-color: $text-black;
+                height: 1px;
+                width: 160px;
+                position: absolute;
+                bottom: -1px;
+            }
+        }
+
+        padding: 25px 0;
+    }
+}
+
+.key-point-image-tab {
+    .key-image {
+        height: 420px;
+        overflow: hidden;
+        border-radius: 12px;
+        transition: all 0.5s ease-in-out; // Smooth animation for image changes
+
+        @media (min-width:350px) and (max-width:1024px) {
+            height: auto !important;
+        }
+
+        // opacity: 0;  
+        // transform: scale(0.95);  
+        img {
+            object-fit: cover;
+            transition: all 0.5s ease-in-out; // Add a smooth zoom-in effect
+        }
+    }
+
+    // Add active class for animation
+    &.active {
+        .key-image {
+            opacity: 1; // Fade in
+            transform: scale(1); // Reset scaling
+        }
+    }
+}
+
+.vision-card-list {
+    .vision-card {
+        background-color: $darkLightColor;
+        border-radius: 18px;
+        padding: 30px;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+
+        .vision-no {
+            font-size: $fs-16;
+            font-weight: $semi-bold;
+            color: $orange;
+            position: absolute;
+            left: 25px;
+        }
+
+        .purpose-dt {
+            padding-left: 20px;
+
+            .purpose-title {
+                font-size: $fs-20;
+                font-weight: $semi-bold;
+                margin-bottom: 10px;
+                color: $white;
+            }
+
+            p {
+                color: $colorgrey;
+                font-size: $fs-16;
+                font-weight: $regular;
+                margin: 0;
+            }
+        }
+
+    }
+}
+
+.event-card {
+    .event-image {
+        position: relative;
+
+        .event-desc-img {
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            padding: 30px;
+
+            .event-sub-title {
+                font-size: $fs-26;
+                font-weight: $semi-bold;
+                color: $white;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: $fs-16;
+                font-weight: $regular;
+                color: $white;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.our-product-slider {
+
+    padding: 0rem 1rem !important;
+
+    .bh-event-card {
+        border-radius: 6px;
+        overflow: hidden;
+
+        .bh-event-image {
+            height: 225px;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .event-body-content {
+            background-color: $white;
+            padding: 20px;
+
+            .event-title {
+                font-size: $fs-20;
+                font-weight: $semi-bold;
+                color: $text-black;
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: $black-opacity-60;
+            }
+        }
+    }
+}
+
+.our-philosophy {
+
+    @media (min-width:350px) and (max-width:1279px) {
+        padding-top: 0 !important;
+    }
+
+    .mission-view-block {
+        position: relative;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 12px;
+
+        .mission-tag {
+            position: absolute;
+            top: 0;
+            padding: 20px;
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            .tag-philosophy {
+                font-size: $fs-20;
+                font-weight: $semi-bold;
+                color: $text-black;
+            }
+        }
+    }
+
+    .bh-mission {
+        h3 {
+            font-size: $fs-26;
+            font-weight: $semi-bold;
+            color: $text-black;
+            margin: 0;
+        }
+    }
+
+    .mission-card-list {
+        .mission-card {
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $border-grey;
+            }
+        }
+    }
+}
+
+.exce-initiave-slide {
+    @media (min-width:350px) and (max-width:640px) {
+        min-height: 300px !important;
+    }
+}
+
+.exce-initiave-slider-btn {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding-top: 4rem;
+
+    @media (min-width:350px) and (max-width:640px) {
+        padding-top: 0 !important;
+    }
+}
+
+.exce-vison-purpose {
+    @media (min-width:350px) and (max-width:640px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.exce-product-navigation {
+    margin-bottom: 35px !important;
+
+    @media (min-width:350px) and (max-width:640px) {
+        position: absolute;
+        bottom: -5rem;
+        width: 100% !important;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-bottom: 0px !important;
+    }
+
+}
+
+.exce-tab-slide-bar {
+    @media (min-width:350px) and (max-width:640px) {
+        position: relative;
+    }
+}
+
+.exce-our-product-div {
+    @media (min-width:350px) and (max-width:640px) {
+        padding-bottom: 5rem !important;
+    }
+}
+
+.exce-slider-tab-product {
+    @media (min-width:350px) and (max-width:640px) {
+        margin-bottom: 0rem !important;
+        justify-content: center;
+    }
+}
+
+.custom-navigation {
+    @media (min-width:350px) and (max-width:640px) {
+        max-width: 100% !important;
+    }
+}
+
+.exce-vison-box {
+    @media (min-width:768px) and (max-width:1024px) {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+
+.exce-vision-inner {
+    @media (min-width:768px) and (max-width:1024px) {
+        width: 100% !important;
+    }
+}
+
+.exce-vision-img-div {
+    @media (min-width:768px) and (max-width:1024px) {
+        width: 100% !important;
+    }
+}
+
+.exce-objective-foundation-heading {
+    @media (min-width:350px) and (max-width:640px) {
+        font-size: 30px !important;
+    }
+
+    @media (min-width:768px) and (max-width:1280px) {
+        font-size: 40px !important;
+    }
+}
+
+.exce-area-of-focus {
+    @media (min-width:350px) and (max-width:640px) {
+        font-size: 40px !important;
+    }
+}
+
+.exce-mision-vision-heading {
+    @media (min-width:350px) and (max-width:640px) {
+        font-size: 34px !important;
+    }
+
+    @media (min-width:768px) and (max-width:1024px) {
+        font-size: 44px !important;
+    }
+}
+
+.exce-mision-vision-outer {
+    @media (min-width:768px) and (max-width:1024px) {
+        margin-bottom: 0 !important;
+    }
+}
+
+.exce-prod-heading {
+    @media (min-width:350px) and (max-width:640px) {
+        font-size: 34px !important;
+    }
+}

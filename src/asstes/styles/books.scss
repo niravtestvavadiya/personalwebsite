@@ -1,0 +1,114 @@
+// Import SCSS Variables
+@import "variables";
+@import "mixins";
+
+.banner {
+    &.books-list-page {
+        background-image: url('../images/books/bh-books-banner.jpg');
+    }
+}
+
+.books-btn-toolbar {
+    margin-top: 25px;
+
+    .btn {
+        width: 185px;
+        font-size: $fs-14;
+        font-weight: $semi-bold;
+
+        &.buy-now {
+            border-color: $white !important;
+        }
+
+        &.learn-more {
+            background-color: $bg-dark-card !important;
+            border-color: $white;
+            color: $white !important;
+
+            &:hover {
+                background-color: $white !important;
+                border-color: $white;
+                color: $text-black !important;
+            }
+        }
+    }
+}
+
+.exce-book-page {
+
+    .banner-title {
+        @media (min-width:350px) and (max-width:640px) {
+            font-size: 40px !important;
+        }
+
+        @media (min-width:768px) and (max-width:1024px) {
+            font-size: 50px !important;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    .exce-books-loadMore {
+        color: black;
+    }
+
+    .exce-books-loadMore:hover {
+        background-color: transparent;
+        color: white;
+        outline: 1px solid white;
+    }
+
+    .bh-event-card {
+
+        height: 570px;
+
+        @media (min-width:350px) and (max-width:1024px) {
+            height: 520px;
+        }
+
+        .bh-event-image {
+
+            height: 305px;
+
+            @media (min-width:350px) and (max-width:1024px) {
+                height: 250px;
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        .event-title {
+            height: 65px;
+
+            @media (min-width:768px) and (max-width:1024px) {
+                height: 65px;
+            }
+
+        }
+
+        .event-body-content {
+            height: 265px;
+
+            @media (min-width:350px) and (max-width:1024px) {
+                height: 270px;
+            }
+        }
+    }
+
+    .books-btn-toolbar {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .exce-buy-now-book {
+        width: fit-content !important;
+        padding: 0.5rem 1rem !important;
+    }
+
+}

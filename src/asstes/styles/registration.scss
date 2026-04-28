@@ -1,0 +1,298 @@
+// Import SCSS Variables
+@import "variables";
+@import "mixins";
+
+
+.page-banner {
+    &.registration-banner {
+        background-image: url('../images/registration-banner.jpg');
+
+        &:after {
+            content: '';
+            background-color: #000;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: .96;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+.registration-accordian {
+    .registration-form {
+        .registration-panel {
+            .accordion-item {
+                padding: 40px;
+                margin-bottom: 30px;
+                border-radius: 12px !important;
+                background-color: $darkLightColor;
+                border: none;
+
+                .accordion-header {
+                    .accordion-button {
+                        color: $white;
+                        font-size: $fs-24;
+                        font-weight: $semi-bold;
+                        background-color: transparent;
+                        box-shadow: none;
+                        border: none;
+                        padding: 0;
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+
+                        &:after {
+                            filter: invert(1);
+                        }
+                    }
+                }
+
+                .accordion-body {
+                    padding: 0;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+
+.layout-of-form {
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-control {
+        height: 56px;
+        box-shadow: 0px 1px 2px 0px #1018280D;
+        background-color: $badgeDark;
+        border-color: $badgeDark;
+        border-radius: 6px;
+        color: $colorgrey !important;
+        width: 100%;
+
+        &:focus {
+            background-color: $badgeDark;
+            border-color: $badgeDark;
+            box-shadow: none;
+        }
+
+        &::placeholder {
+            color: $colorgrey;
+        }
+    }
+
+    textarea {
+        &.form-control {
+            height: auto;
+            min-height: 110px;
+            resize: none;
+        }
+    }
+}
+
+.btn-continue {
+    .btn {
+        color: #232325;
+        font-weight: $semi-bold;
+        font-size: $fs-16;
+        height: 50px;
+
+        &:hover {
+            border-color: $white;
+        }
+    }
+}
+
+.decleration-msg {
+    margin-top: 25px;
+
+    .custom-checkbox {
+        width: 20px;
+        height: 20px;
+        appearance: none;
+        cursor: pointer;
+        box-shadow: 0px 1px 2px 0px #1018280D;
+        background-color: $badgeDark;
+        border-color: $badgeDark;
+        border-radius: 6px;
+        color: $colorgrey !important;
+        position: absolute;
+        left: 0;
+    }
+
+    .custom-checkbox:checked::after {
+        content: '✔';
+        font-size: $fs-12;
+        color: $white;
+        position: absolute;
+        top: 2px;
+        left: 5px;
+    }
+
+    p {
+        font-weight: $regular;
+        font-size: $fs-12;
+        color: $colorgrey;
+        position: relative;
+        padding-left: 35px;
+
+        &:not(:last-child) {
+            margin-bottom: 15px !important;
+        }
+
+        span {
+            color: $white;
+        }
+
+    }
+}
+
+.registration-card {
+    background-color: $white;
+    padding: 32px;
+    border-radius: 12px;
+
+    .reg-header {
+        border-bottom: 1px solid #D9D9D9;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+
+        h2 {
+            font-size: $fs-24;
+            font-weight: $semi-bold;
+            color: $text-black;
+            margin-bottom: 0;
+        }
+
+        span {
+            font-size: $fs-14;
+            font-weight: $regular;
+            color: #5A5A5A;
+        }
+    }
+
+    .reg-details-view {
+        li {
+            span {
+                display: block;
+            }
+
+            .reg-label {
+                font-size: $fs-16;
+                font-weight: $medium;
+                color: $text-black;
+            }
+
+            .reg-label-vl {
+                font-size: $fs-16;
+                font-weight: $regular;
+                color: #5A5A5A;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+    }
+
+    .reg-footer {
+        border-top: 1px solid #D9D9D9;
+        padding-top: 15px;
+        margin-top: 15px;
+
+        span {
+            font-size: $fs-14;
+            font-weight: $regular;
+            color: #5A5A5A;
+        }
+
+        .total-cost {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                font-size: $fs-20;
+                font-weight: $semi-bold;
+                color: $text-black;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.add-more-btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 2rem;
+}
+
+.add-more-form-event-btn {
+    background-color: #FFFFFF;
+    border: none;
+    color: black;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50px;
+}
+
+.add-more-form-event-btn:hover {
+    outline: 1px solid white;
+    color: #FFFFFF;
+    background-color: transparent;
+}
+
+//Registration Page Responsive 
+.exce-reg-page {
+    .banner-title {
+        @media (min-width:350px) and (max-width:640px) {
+            font-size: 50px !important;
+        }
+    }
+
+    .registration-banner {
+        padding-bottom: 0 !important;
+    }
+
+    .registration-sec {
+        @media (min-width:350px) and (max-width:640px) {
+            padding-top: 0 !important;
+        }
+    }
+
+    .exce-reg-card-outer {
+        @media (min-width:350px) and (max-width:1024px) {
+            padding-top: 2rem !important;
+        }
+    }
+
+    .registration-form {
+        @media (min-width:768px) and (max-width:1024px) {
+            padding-top: 2rem !important;
+        }
+    }
+
+    .exce-about-banner-outer {
+        @media (min-width:768px) and (max-width:1536px) {
+            margin: 0 !important;
+            width: 100%;
+        }
+    }
+}

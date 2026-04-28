@@ -1,0 +1,33 @@
+// Import SCSS Variables
+@import "variables";
+@import "mixins";
+
+.exce-newsletter-heading {
+  @media (min-width:350px) and (max-width:640px) {
+    font-size: 30px !important;
+    text-align: center !important;
+  }
+}
+
+.subscribe-dt {
+  flex-direction: column !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.news-letter-contact {
+  background-color: white;
+  padding: 0.8rem 2rem !important;
+  color: black !important;
+  border-radius: 100px;
+  font-weight: 600;
+  border: none;
+}
+
+.news-letter-contact:hover {
+  background-color: transparent !important;
+  color: white !important;
+  outline: 1px solid white !important;
+
+}

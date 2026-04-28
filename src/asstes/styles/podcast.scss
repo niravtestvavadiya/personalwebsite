@@ -1,0 +1,58 @@
+.audio-player {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 416px;
+	width: 416px;
+	margin: auto;
+}
+.progress-bar {
+	input[type="range"] {
+		width: 100%;
+		-webkit-appearance: none;
+		appearance: none;
+		height: 5px;
+		background: #ddd;
+		border-radius: 5px;
+		outline: none;
+		margin: 10px 0;
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 10px;
+			height: 10px;
+			background: black;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+	}
+	max-width: 416px;
+	width: 100%;
+}
+.time-display {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 10px;
+	font-size: 14px;
+	color: #555;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #555;
+    width: 40px;
+    height: 40px;
+    &:hover {
+      color: #000;
+    }
+  }
+}

@@ -1,0 +1,619 @@
+.page-banner.banner-two {
+    min-height: 234px;
+    display: none;
+}
+
+.title-heading .sub-heading {
+    display: block;
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+.council-hero {
+    background-image: url('../images/private-council/hero-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // background-position: bottom -200px right;
+    // background-position: center bottom;
+    height: 600px;
+    padding: 80px 0;
+
+  background-position: center bottom;
+}
+
+
+@media (min-width: 1200px) {
+  .council-hero {
+    background-position: bottom -200px right;
+  }
+}
+
+.private-council-content {
+    max-width: 600px;
+
+    .title-heading {
+        font-weight: 700;
+        text-align: left;
+    }
+
+    .btn-toolbar-title {
+        .btn {
+            width: auto;
+        }
+    }
+}
+
+.who-seeks-section {
+    background-color: #000;
+
+    .sec-title {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 45px;
+        text-align: center;
+
+        .title-heading {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .supporting-copy {
+            color: #fff;
+        }
+    }
+}
+
+.who-card {
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+    color: #fff;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.who-card:hover {
+    transform: translateY(-6px);
+}
+
+.who-card-image {
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+}
+
+.who-card-content {
+    padding: 15px;
+}
+
+.who-card-content h5 {
+    font-weight: 700;
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.who-card-content p {
+    color: #444;
+    font-size: 14px;
+}
+
+.the-private-what-this {
+    background-color: #F4F8FC;
+}
+
+.private-what-this-content {
+    padding-right: 25px;
+
+    .title-heading {
+        text-align: left;
+        margin-bottom: 15px;
+        font-weight: 800;
+        font-size: 45px;
+    }
+}
+
+.private-council-block {
+    height: 450px;
+    overflow: hidden;
+    box-shadow: 5px 15px 20px rgba(38, 42, 55, 0.05);
+    border-radius: 15px;
+}
+
+
+.what-happens-section {
+    padding: 100px 0;
+    background: #0d0d0d;
+    color: #fff;
+    text-align: center;
+
+    /* LEFT SIDE */
+    .left-panel {
+        color: #fff;
+        padding-right: 40px;
+    }
+
+    .section-title {
+        font-size: 50px;
+        margin-bottom: 30px;
+        text-align: left;
+        font-weight: 700;
+    }
+
+    .statement-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .statement-list li {
+        font-size: 17px;
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .statement-list li::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 10px;
+    }
+
+    /* RIGHT SIDE */
+    .right-panel {
+        background: #fff;
+        padding: 50px;
+        border-radius: 12px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    }
+
+    .main-text {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #333;
+    }
+
+    .final-line {
+        margin-top: 25px;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #000;
+    }
+
+}
+
+.what-not-visual {
+    .header {
+        max-width: 750px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #000;
+        }
+
+        p {
+            color: #444;
+        }
+    }
+
+
+    .visual-card {
+        position: relative;
+        height: 260px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 18px;
+        overflow: hidden;
+        transition: transform 0.4s ease;
+    }
+
+    .visual-card:hover {
+        transform: scale(1.04);
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top,
+                rgba(0, 0, 0, 0.85),
+                rgba(0, 0, 0, 0.4));
+    }
+
+    .content {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .cross {
+        font-size: 1.6rem;
+        margin-bottom: 5px;
+        display: block;
+        color: #fff;
+    }
+
+    .content h5 {
+        font-size: 1.1rem;
+        color: #fff;
+    }
+
+    .bottom-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .bottom-text p {
+        color: #444;
+    }
+
+    .highlight {
+        margin-top: 15px;
+        font-weight: 600;
+    }
+}
+
+.why-bhupendra {
+    background: #0d0d0d;
+    color: #fff;
+
+    .image-block {
+        background-image: url('../images/private-council/why-bhupendra.jpg');
+        height: 450px;
+        border-radius: 16px;
+        background-size: cover;
+        background-position: top -100px right;
+        transform: scale(1.05);
+        transition: transform 1.2s ease;
+    }
+
+    .image-block:hover {
+        transform: scale(1.1);
+    }
+
+    .content-block {
+        padding: 20px 40px;
+        opacity: 0;
+        transform: translateY(40px);
+        animation: fadeSlideUp 1s ease forwards;
+    }
+
+    .section-title {
+        font-size: 50px;
+        font-weight: 800;
+        margin-bottom: 25px;
+    }
+
+    .text {
+        font-size: 15px;
+        color: #ddd;
+
+        &:not(:last-child) {
+            margin-bottom: 20px !important;
+        }
+
+        &.highlight {
+            font-weight: 500;
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+
+
+    @keyframes fadeSlideUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+}
+
+.engagement-threshold {
+    background-image: url('../images/private-council/threshold-bg.jpg');
+    position: relative;
+    padding: 80px 0;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    /* Dark overlay */
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: rgb(231 231 231 / 60%);
+    }
+
+    /* Card */
+    .threshold-card {
+        position: relative;
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 35px;
+        background: rgb(0 0 0 / 73%);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        text-align: center;
+        color: #fff;
+
+        /* animation */
+        opacity: 0;
+        transform: scale(0.95) translateY(40px);
+        animation: fadeScaleUp 1.2s ease forwards;
+    }
+
+    .title {
+        font-size: 45px;
+        margin-bottom: 25px;
+        font-weight: 700;
+    }
+
+    .text {
+        font-size: 15px;
+        color: #ddd;
+
+        &:not(:last-child) {
+            margin-bottom: 20px !important;
+        }
+
+        &.highlight {
+            font-weight: 500;
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+
+    /* Animation */
+    @keyframes fadeScaleUp {
+        from {
+            opacity: 0;
+            transform: scale(0.9) translateY(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    /* subtle glow effect */
+    .threshold-card::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        border-radius: 16px;
+        background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+        opacity: 0;
+        transition: opacity 0.4s;
+    }
+
+    .threshold-card:hover::before {
+        opacity: 1;
+    }
+}
+
+.process-section {
+    background: #f4f4f4;
+
+    .section-title {
+        font-size: 46px;
+        font-weight: 800;
+        margin-bottom: 45px;
+        text-align: center;
+        color: #000;
+    }
+
+    .timeline {
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        background: #ddd;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        width: 50%;
+        padding: 20px 40px;
+        position: relative;
+    }
+
+    .timeline-item.left {
+        left: 0;
+        text-align: right;
+    }
+
+    .timeline-item.right {
+        left: 50%;
+    }
+
+    .timeline-content {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: transform 0.4s ease;
+        opacity: 0;
+        transform: translateY(40px);
+        animation: fadeUp 0.8s ease forwards;
+    }
+
+    .timeline-content:hover {
+        transform: translateY(-6px);
+    }
+
+    .timeline-image {
+        height: 180px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .timeline-text {
+        padding: 20px;
+    }
+
+    .timeline-text h5 {
+        font-weight: 600;
+    }
+
+    .timeline-text p {
+        color: #555;
+        font-size: 0.95rem;
+    }
+
+    @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.closing-cta {
+    position: relative;
+    background-size: cover;
+    background-image: url('../images/private-council/cta-bg.jpg');
+    background-position: bottom -177px right;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    padding: 140px 0;
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgb(89 78 78 / 70%), rgb(41 41 41 / 85%));
+    }
+
+    .cta-content {
+        position: relative;
+        max-width: 750px;
+        margin: 0 auto;
+
+        opacity: 0;
+        transform: translateY(40px);
+        animation: fadeUp 1s ease forwards;
+    }
+
+    .cta-title {
+        font-size: 45px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .cta-text {
+        color: #ccc;
+        margin-bottom: 30px;
+        line-height: 1.7;
+    }
+
+    .btn-toolbar-title {
+        .btn {
+            width: auto;
+        }
+    }
+
+    .cta-note {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #aaa;
+    }
+
+    @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+        }
+
+        70% {
+            box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        }
+    }
+}
+
+.footer{
+    .footer-top {
+    display: none !important;
+}
+.bottom-footer{
+    display: none;
+}
+}
+
+@media (max-width: 767px) {
+
+  .process-section {
+
+    .timeline {
+      margin-top: 30px;
+    }
+
+    .timeline::before {
+      display: none;
+    }
+
+    .timeline-item {
+      width: 100%;
+      padding: 0 0 25px 0;
+      left: 0 !important;
+      text-align: left !important;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+      left: 0;
+    }
+
+    .timeline-content {
+      margin: 0 auto;
+      animation: none;
+      transform: none;
+      opacity: 1;
+    }
+
+    .timeline-image {
+      height: 200px;
+    }
+
+    .timeline-text {
+      padding: 18px;
+    }
+
+    .timeline-text h5 {
+      font-size: 18px;
+    }
+
+    .timeline-text p {
+      font-size: 14px;
+    }
+  }
+}

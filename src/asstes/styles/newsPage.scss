@@ -1,0 +1,84 @@
+.exce-news-page {
+
+  .banner-title {
+    @media (min-width:350px) and (max-width:1024px) {
+      font-size: 40px !important;
+    }
+  }
+
+  .bh-event-card {
+
+    height: 600px;
+
+    @media (min-width:350px) and (max-width:1024px) {
+      height: 600px;
+    }
+
+    .bh-event-image {
+
+      height: 370px;
+
+      @media (min-width:1280px) and (max-width:1536px) {
+        height: 340px;
+      }
+
+      @media (min-width:350px) and (max-width:1024px) {
+        height: 300px;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+    }
+
+    .event-body-content {
+
+      height: 230px;
+
+      @media (min-width:1280px) and (max-width:1536px) {
+        height: 260px;
+      }
+
+      @media (min-width:350px) and (max-width:1024px) {
+        height: 300px;
+      }
+
+      .event-title {
+        @media (min-width:350px) and (max-width:1024px) {
+          height: 160px;
+        }
+      }
+
+    }
+
+
+  }
+
+  .exce-news-card-col {
+    @media (min-width:768px) and (max-width:1024px) {
+      width: 50%;
+    }
+  }
+
+  .news-load-more {
+    button {
+      padding: 0.8rem 1.5rem !important;
+      background-color: white;
+      border: none;
+      color: black;
+      border-radius: 100px;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background-color: transparent;
+      outline: 1px solid white;
+      color: white;
+    }
+  }
+
+ 
+
+}

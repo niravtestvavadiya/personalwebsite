@@ -1,0 +1,89 @@
+.exce-podcast-page {
+  .banner-title {
+    @media (min-width:350px) and (max-width:640px) {
+      font-size: 40px !important;
+    }
+
+    @media (min-width:768px) and (max-width:1024px) {
+      font-size: 50px !important;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .exce-podcast-page-card {
+    @media (min-width:768px) and (max-width:1024px) {
+      width: 50%;
+    }
+  }
+
+  .title-heading {
+    @media (min-width:350px) and (max-width:1024px) {
+      font-size: 50px !important;
+    }
+  }
+
+  .event-tab-option {
+    @media (min-width:350px) and (max-width:640px) {
+      overflow: auto !important;
+    }
+  }
+
+  .tab-button {
+    @media (min-width:350px) and (max-width:640px) {
+      width: 120px !important;
+    }
+
+    @media (min-width:768px) and (max-width:1024px) {
+      width: 135px !important;
+    }
+  }
+
+  .bh-event-card {
+
+    height: 500px;
+
+    @media (min-width:350px) and (max-width:1024px) {
+      height: 450px;
+    }
+
+    .bh-event-image {
+
+      height: 305px;
+
+      @media (min-width:350px) and (max-width:1024px) {
+        height: 250px;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+    }
+
+    .event-title {
+      height: 65px;
+
+      @media (min-width:768px) and (max-width:1024px) {
+        height: 65px;
+      }
+
+    }
+
+    .event-body-content {
+      height: 200px;
+
+      @media (min-width:350px) and (max-width:1024px) {
+        height: 200px;
+      }
+    }
+  }
+
+  .exce-book-card {
+    @media (min-width:768px) and (max-width:1024) {
+      width: 50%;
+
+    }
+  }
+}

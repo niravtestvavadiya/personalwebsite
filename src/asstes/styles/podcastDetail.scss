@@ -1,0 +1,193 @@
+// Import SCSS Variables
+@import "variables";
+@import "mixins";
+
+.banner {
+    &.podcast-banner-details {
+        background-color: $bg-b;
+        background-image: none;
+
+        &.banner-two {
+            min-height: 100px;
+            align-items: end;
+            padding-bottom: 0;
+        }
+
+    }
+}
+
+.podcast-details-sec {
+    .podcast-speaker-video {
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        position: relative;
+        max-height: 480px;
+
+        img {
+            height: 100%;
+            object-fit: fill;
+        }
+
+        // &:after{
+        //     content: '';
+        //     background-image: url('../images/podcast/gradient-color.svg');
+        //     position: absolute;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     height: 300px;
+        // }
+    }
+
+    .podcast-preview {
+        .podcast-preview-title {
+            color: $white;
+            font-size: $fs-46;
+            font-weight: $semi-bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: $text-grey;
+            font-size: $fs-16;
+            font-weight: $regular;
+            line-height: 30px;
+
+            // &:not(:last-child) {
+            //     margin-bottom: 20px !important;
+            // }
+        }
+
+        .audio-player {
+            margin-top: 15px;
+            max-width: 100%;
+            width: 100%;
+
+            .progress-bar {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    .shared-by {
+        margin-top: 25px;
+
+        .shared-label {
+            color: $white;
+            font-size: $fs-16;
+            font-weight: $medium;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            @include flex(row, start, center);
+            padding: 0rem !important;
+
+            li {
+                color: $text-grey;
+                font-size: $fs-16;
+                cursor: pointer;
+                list-style: none;
+
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+
+                &::before {
+                    content: none !important;
+                }
+            }
+        }
+    }
+}
+
+
+.prodcast-slider-list {
+    .bh-event-card {
+
+        .event-body-content {
+            background-color: $bgLightColor;
+
+            .tagline-event {
+                color: $textDarkGrey;
+            }
+
+            .event-title {
+                color: $bg-dark-card;
+            }
+
+            .event-footer {
+                .btn-toolbar {
+                    button {
+                        &.btn {
+                            &.btn-default {
+                                &.bh-btn-white {
+                                    background-color: $bg-b !important;
+                                    color: $white !important;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+    }
+}
+
+.slider-tab-toolbar {
+    align-items: end;
+}
+
+.details-desc {
+    div {
+        color: white !important;
+
+        ul {
+            padding: 2rem 0rem !important;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            list-style: none;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                &::before {
+                    border-radius: 100%;
+                    font-family: $fontAwesome;
+                    content: "\f26b";
+                    color: #FD5901;
+                    font-weight: bold;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        p {
+            margin-bottom: 0px !important;
+
+            strong {
+                font-weight: 700;
+                color: white !important;
+            }
+        }
+
+        h2,
+        h3,
+        h4 {
+            margin-bottom: 20px !important;
+        }
+    }
+}

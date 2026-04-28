@@ -1,0 +1,100 @@
+// Tab
+@import 'variables';
+
+
+.initiatives-view-tab {
+  flex: 1;
+  min-height: 34.0625rem;
+  display: flex;
+
+  .initiatives-view-tab-item {
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    cursor: pointer;
+    border-left: 1px solid $tabBorderColor;
+    flex-flow: column;
+    flex: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 33.33%;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+    transition: width 0.4s;
+    display: flex;
+    position: relative;
+
+    .tab-title {
+      font-size: $fs-16;
+      font-weight: $semi-bold;
+      margin-bottom: 10px;
+      color: $text-tab;
+    }
+
+    .tab-no {
+      font-size: $fs-16;
+      font-weight: $regular;
+      color: $text-tab;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .tab-desc {
+      font-size: $fs-20;
+      font-weight: $semi-bold;
+      color: $text-tab;
+      margin-bottom: 0;
+      display: none;
+    }
+
+    .tab-image-block {
+      height: auto;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .card_fill-vertical {
+      z-index: 1;
+      background-color: $orange;
+      width: 1px;
+      height: 0%;
+      position: absolute;
+      inset: auto auto 0% 0%;
+    }
+
+    &.current-tab-active {
+
+      @media (min-width:350px) and (max-width:1289px) {
+        width: 100%;
+      }
+
+      width: 70%;
+
+      .tab-no {
+        color: $orange;
+        font-weight: $semi-bold;
+      }
+
+      .tab-title {
+        font-size: $fs-26;
+        color: $white;
+      }
+
+      .tab-desc {
+        font-size: $fs-16;
+        font-weight: $regular;
+        display: block;
+      }
+
+      .tab-image-block {
+        height: 350px;
+      }
+
+      .card_fill-vertical {
+        animation-name: fill-vertical;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,292 @@
+// Import SCSS Variables
+@import "variables";
+
+.page-banner {
+  background-image: url("../images/about/About_page_banner_New.jpg");
+  width: 100%;
+  min-height: 700px;
+  position: relative;
+  display: flex;
+  align-items: end;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0 0;
+
+  @media (min-width:768px) and (max-width:1024px) {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 6rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  @media (min-width:350px) and (max-width:640px) {
+    padding: 10px 0 0;
+    min-height: auto;
+    height: 255px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    align-items: flex-start;
+  }
+
+  .about-banner-content {
+    padding-bottom: 60px;
+
+    @media (min-width:768px) and (max-width:1024px) {
+      padding-bottom: 0px !important;
+    }
+
+    @media (min-width:350px) and (max-width:640px) {
+      padding-bottom: 0px !important;
+    }
+
+    .text-orange {
+      display: block;
+    }
+  }
+
+  .bh-profile-banner {
+    height: 550px;
+    overflow: hidden;
+
+    @media (min-width:350px) and (max-width:1024px) {
+      height: auto !important;
+    }
+
+  }
+}
+
+.details-desc {
+
+  .exce-about-insp-heading {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: black !important;
+    padding-bottom: 2rem;
+
+    p {
+      font-weight: 700;
+      font-size: 60px;
+      margin-bottom: 2rem !important;
+      text-align: center;
+
+      @media (min-width:350px) and (max-width:640px) {
+        font-size: 30px;
+      }
+
+      @media (min-width:768px) and (max-width:1279px) {
+        font-size: 40px;
+      }
+    }
+
+    span {
+      display: block;
+      width: 100px;
+      height: 2px;
+      background-color: black;
+    }
+  }
+
+  .qute-msg-title {
+    font-size: $fs-46;
+    font-weight: $semi-bold;
+
+    @media (min-width:350px) and (max-width:640px) {
+      font-size: 30px;
+    }
+
+  }
+}
+
+.journey-timeline {
+  li {
+    max-width: 672px;
+
+    .timeline-content {
+      position: relative;
+
+      .timeline__no {
+        color: $timeLineCount;
+        font-size: $fs-140;
+        font-weight: $extra-bold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .timeline__content {
+        position: relative;
+        z-index: 1;
+        padding-top: 110px;
+        padding-left: 65px;
+
+        .timeline__title {
+          margin-bottom: 15px;
+          color: $timeLineTitle;
+          font-size: $fs-36;
+          font-weight: $semi-bold;
+        }
+
+        .timeline__desc {
+          margin-bottom: 0;
+          color: $white;
+          font-size: $fs-16;
+          font-weight: $regular;
+        }
+      }
+
+    }
+
+    &:nth-of-type(even) {
+      margin-left: auto;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.meet-philosopher-sec {
+  .philosopher-img {
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .philosopher-book-list {
+    .philosopher__no {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      font-size: $fs-16;
+      font-weight: $semi-bold;
+      color: $white;
+      margin-bottom: 20px;
+      background-color: $textDarkGrey;
+      border-radius: 100px;
+      text-align: center;
+    }
+
+    .philosopher__title {
+      font-size: $fs-24;
+      font-weight: $semi-bold;
+      color: $white;
+      margin-bottom: 20px;
+    }
+
+    .philosopher__desc {
+      color: $textColor;
+      font-size: $fs-16;
+      font-weight: $regular;
+    }
+  }
+}
+
+.about-bh-sec {
+  .title-sec {
+    margin-top: 0;
+  }
+
+  &.bg-book-banner {
+    height: auto;
+
+    @media (min-width:350px) {
+      padding: 0px !important;
+    }
+
+    img {
+      height: 100%;
+    }
+
+    .title-heading {
+      @media (min-width:350px) and (max-width:640px) {
+        font-size: 40px !important;
+        line-height: 50px !important;
+      }
+    }
+  }
+}
+
+.exce-about-us {
+
+  .details-desc {
+    @media (min-width:1280px) {
+      max-width: 100% !important;
+    }
+  }
+
+  .banner-title-about-banner {
+    line-height: 90px !important;
+  }
+
+  .timeline__title {
+
+    @media (min-width:350px) and (max-width:640px) {
+      font-size: 30px !important;
+      line-height: 35px !important;
+    }
+  }
+
+  .banner-title {
+    @media (min-width:350px) and (max-width:640px) {
+      font-size: 36px !important;
+      line-height: 38px !important;
+    }
+
+    @media (min-width:768px) and (max-width:1024px) {
+      font-size: 50px !important;
+      line-height: 55px !important;
+    }
+  }
+
+  .qute-msg-title {
+
+    font-size: 24px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 500;
+
+    @media (min-width:350px) and (max-width:640px) {
+      font-size: 20px !important;
+      line-height: 35px !important;
+      text-align: left;
+    }
+  }
+
+  .banner-title-2 {
+    @media (min-width:350px) and (max-width:640px) {
+      font-size: 30px !important;
+      line-height: 45px !important;
+    }
+
+    @media (min-width:768px) and (max-width:1024px) {
+      font-size: 35px !important;
+      line-height: 40px !important;
+    }
+  }
+
+  .outer-banner-title-exce {
+    @media (min-width:768px) and (max-width:1024px) {
+      width: 100% !important;
+    }
+  }
+
+  .exce-philosopher-img-outer {
+    @media (min-width:768px) and (max-width:1024px) {
+      width: 100% !important;
+    }
+  }
+
+  .sub-title {
+    @media (min-width:350px) and (max-width:640px) {
+      padding: 10px 0rem !important;
+      font-size: 14px !important;
+    }
+  }
+}
