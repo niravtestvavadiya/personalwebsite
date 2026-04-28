@@ -10,7 +10,7 @@ import FacebookLoginImg from "../asstes/images/icons/facebook-icon.png";
 import GmailLogin from "../asstes/images/icons/google-icon.png";
 import AppleLogin from "../asstes/images/icons/apple-icon.png";
 import { LoginSocialGoogle } from "reactjs-social-login";
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
+import FacebookLogin from "@greatsumini/react-facebook-login";
 import { useDispatch } from "react-redux";
 import { setPhoneNumber } from "../redux/authSlice";
 
@@ -18,15 +18,16 @@ import { setPhoneNumber } from "../redux/authSlice";
 const FaceBookAuthButton = () => {
   const navigate = useNavigate();
   const SECRET_KEY = process.env.REACT_APP_SECRET_ENCR_KEY;
+
   const handleSuccess = (response) => {
-    if (!response.id || !response.accessToken) {
-      console.error("Facebook login failed");
+    if (!response?.userID || !response?.accessToken) {
+      console.error("Facebook login failed", response);
       return;
     }
 
     const userData = {
       provider: "facebook",
-      provider_id: response.id,
+      provider_id: response.userID,
       email: response.email,
       full_name: response.name,
       id_token: response.accessToken,
@@ -34,33 +35,31 @@ const FaceBookAuthButton = () => {
 
     fetch(`${process.env.REACT_APP_API_BASE_URL}api/auth/social-login`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userData),
     })
       .then((res) => res.json())
       .then((res) => {
-        if (res) {
-          // const encryptedToken = CryptoJS.AES.encrypt(res.data.token, SECRET_KEY).toString();
-          const encryptedUser = CryptoJS.AES.encrypt(JSON.stringify(res.data.user), SECRET_KEY).toString();
-          // localStorage.setItem("auth_token", encryptedToken);
+        if (res?.data?.user) {
+          const encryptedUser = CryptoJS.AES.encrypt(
+            JSON.stringify(res.data.user),
+            SECRET_KEY,
+          ).toString();
+
           localStorage.setItem("auth_user", encryptedUser);
-          navigate("/")
-        } else {
-          console.error("Failed to store token");
+          navigate("/");
         }
       })
-      .catch((err) => console.error("Error:", err));
+      .catch((err) => console.error("Facebook Error:", err));
   };
 
   return (
     <FacebookLogin
       appId={process.env.REACT_APP_FB_APP_ID}
-      callback={handleSuccess}
-      fields="name,email,picture"
-      render={(renderProps) => (
-        <button onClick={renderProps.onClick} className="third-party-login facebook-login">
+      onSuccess={handleSuccess}
+      onFail={(err) => console.error("Facebook login failed", err)}
+      render={({ onClick }) => (
+        <button onClick={onClick} className="third-party-login facebook-login">
           <img src={FacebookLoginImg} alt="Facebook Login" />
         </button>
       )}
@@ -68,14 +67,13 @@ const FaceBookAuthButton = () => {
   );
 };
 // ------------------------
+// ------------------------
 
 // Google Login ------------------------
 const GoogleAuthButton = () => {
-
   const handleSuccess = (response) => {
-
     if (!response?.data) {
-      console.log("Login Failed ", response)
+      console.log("Login Failed ", response);
       return;
     }
 
@@ -103,7 +101,7 @@ const GoogleAuthButton = () => {
       client_id={process.env.REACT_APP_GG_APP_ID}
       onResolve={handleSuccess}
       onReject={(err) => console.log("There is error", err)}
-      scope='email https://www.googleapis.com/auth/userinfo.email'
+      scope="email https://www.googleapis.com/auth/userinfo.email"
     >
       <button className="third-party-login google-login">
         <img src={GmailLogin} alt="Gmail Login" />
@@ -114,7 +112,6 @@ const GoogleAuthButton = () => {
 // ------------------------
 
 function LoginViewPage() {
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState({});
@@ -124,20 +121,19 @@ function LoginViewPage() {
     dispatch(setPhoneNumber(inputValue));
 
     try {
-      await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}api/send-otp`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(inputValue),
-        }
-      ).then((res) => res.json).then(() => navigate("/otp-sent"));
+      await fetch(`${process.env.REACT_APP_API_BASE_URL}api/send-otp`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(inputValue),
+      })
+        .then((res) => res.json)
+        .then(() => navigate("/otp-sent"));
     } catch (error) {
       console.error("Error sending OTP:", error);
     }
-  }
+  };
 
   return (
     <div className="login-page-body">
@@ -159,8 +155,14 @@ function LoginViewPage() {
                       <PhoneInput
                         country={"in"}
                         onChange={(phone, country) => {
-                          const formattedPhone = phone.replace(`${country.dialCode}`, "");
-                          setInputValue({ phone: formattedPhone, country_code: `+${country.dialCode}` });
+                          const formattedPhone = phone.replace(
+                            `${country.dialCode}`,
+                            "",
+                          );
+                          setInputValue({
+                            phone: formattedPhone,
+                            country_code: `+${country.dialCode}`,
+                          });
                         }}
                         inputclassName="form-control"
                         placeholder="Enter Mobile Number"
